@@ -49,6 +49,34 @@ public class ElectronicGadget {
 		}
 	}
 	
+	void specAC(String a,String b, String h, char d, int e) {
+		System.out.println("Please enter the brand of the air conditioner you need. >>");
+		String ac = in.next();
+		System.out.println("The brand you wanted is " +ac);
+		System.out.println("Please enter the quantity you need. >>");
+		int ac1 = in.nextInt();
+		double sum1 = e*ac1;
+		if(ac.equalsIgnoreCase("Samsung")) {
+			System.out.println("Brand    : " +a);
+			System.out.println("Model    : " +b);
+			System.out.println("Size: " +h);
+			System.out.println("Portable : " +d);
+			System.out.println("The price for one unit is: " + "RM" +e);
+			System.out.println("The total price is: RM" +sum1);
+			System.out.println("----------------------------------------------------- \n");
+		} else if(ac.equalsIgnoreCase("Midea")) {
+			System.out.println("Brand    : " +a);
+			System.out.println("Model    : " +b);
+			System.out.println("Size: " +h);
+			System.out.println("Portable : " +d);
+			System.out.println("The price for one unit is: " + "RM" +e);
+			System.out.println("The total price is: RM" +sum1);
+			System.out.println("----------------------------------------------------- \n");
+		} else {
+			System.out.println("Sorry, " +ac+ " is not available at the moment. ");
+		}
+	}
+	
 	void warrantyClaim() {
 		System.out.println(" **** CHECK YOUR PRODUCT'S WARRANTY **** ");
 		System.out.println("Please enter the brand of the product. >>");
@@ -93,13 +121,13 @@ public class ElectronicGadget {
 		System.out.println("------------------------------------------------------ \n");
 	}
 	
-	void price() {
+	void price(int e) {
 		System.out.println(" **** CHECKOUT SECTION **** ");
 		System.out.println("Please enter the brand of the product and the quantity of your choice. >>");
 		String brand2 = in.next();
 		int quantity = in.nextInt();
 		System.out.println("You have chosen to buy " +quantity+ " of " +brand2);
-		int sum = quantity*480;
+		int sum = quantity*e;
 		System.out.println("The total price for your order is RM" +sum);
 		System.out.println("======================================================");
 		System.out.println();
